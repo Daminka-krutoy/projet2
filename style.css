@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #00f5ff;
+    --secondary-color: #00ff99;
+    --background-color: #0f0f0f;
+    --card-background: #1c1c1e;
+    --text-color: #f0f0f0;
+    --hover-shadow: rgba(0, 255, 153, 0.7);
+    --title-shadow: rgba(0, 255, 153, 0.7);
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.7);
+}
+
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.work-item {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 15px var(--title-shadow);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lesson {
+    background-color: var(--card-background);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--hover-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lesson:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--hover-shadow);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--title-shadow);
+}
+
+p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--hover-shadow);
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1em;
+    color: #888;
+}
+
+footer p {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
